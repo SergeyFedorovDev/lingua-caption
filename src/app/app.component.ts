@@ -1,4 +1,4 @@
-import { TuiRoot } from "@taiga-ui/core";
+import { TuiRoot } from '@taiga-ui/core';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -10,19 +10,13 @@ import { finalize, map, Observable, of, Subject, switchMap, timer } from 'rxjs';
   selector: 'app-root',
   imports: [RouterOutlet, TuiRoot, NgIf, TuiFiles, ReactiveFormsModule, AsyncPipe],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  protected readonly control = new FormControl<TuiFileLike | null>(
-    null,
-    Validators.required,
-  );
+  protected readonly control = new FormControl<TuiFileLike | null>(null, Validators.required);
 
   protected readonly failedFiles$ = new Subject<TuiFileLike | null>();
   protected readonly loadingFiles$ = new Subject<TuiFileLike | null>();
-  protected readonly loadedFiles$ = this.control.valueChanges.pipe(
-    switchMap((file) => this.processFile(file)),
-  );
+  protected readonly loadedFiles$ = this.control.valueChanges.pipe(switchMap((file) => this.processFile(file)));
 
   protected removeFile(): void {
     this.control.setValue(null);
