@@ -37,6 +37,7 @@
     "@angular/compiler-cli": "^19.0.0",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.0.2",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -46,11 +47,13 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-eslint": "^16.3.0",
     "stylelint": "^16.13.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
+    "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "typescript-eslint": "8.18.0"
   }
