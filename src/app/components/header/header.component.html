@@ -1,0 +1,30 @@
+<header tuiHeader="m">
+  <div class="py-2 block mx-auto w-full px-4 box-border">
+    <nav class="flex items-center justify-between">
+      <a routerLink="/"><h1 tuiTitle class="text-blue-500">LinCap</h1></a>
+      <div>
+        <ul class="flex items-center gap-2 text-base">
+          @for (item of routeItem; track $index) {
+            <li>
+              <a
+                class="group/link relative inline-block px-3 py-3 [&.active_span]:w-full"
+                [routerLink]="item.routeLink"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                <span
+                  class="absolute transition-all duration-300 bg-blue-500 left-auto right-0 bottom-1 h-[6px] group-hover/link:w-full w-0 group-hover/link:left-0 group-hover/ui:right-auto"
+                ></span>
+                {{ item.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+      <div tuiAccessories>
+        <button size="m" [style.color]="'inherit'" appearance="flat" tuiButton>Log in</button>
+        <button class="text-inherit" size="m" tuiButton>Sign up</button>
+      </div>
+    </nav>
+  </div>
+</header>
