@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --tui-background-accent-1: #3b82f6;
+  --tui-background-accent-1-hover: #6ca3fb;
+  --tui-background-accent-1-pressed: #134aa0;
+
+  --tui-radius-m: none;
+}
+
+[tuiButton][tuiButton][data-size="m"] {
+  font-weight: 400;
+}
