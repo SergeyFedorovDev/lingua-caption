@@ -2,7 +2,7 @@
 const eslintConfig = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
 
 module.exports = tseslint.config(
   {
@@ -46,6 +46,12 @@ module.exports = tseslint.config(
         "error",
         {
           parser: "angular",
+        },
+      ],
+      "@angular-eslint/template/label-has-associated-control": [
+        "error",
+        {
+          controlComponents: ["input", "select", "textarea", "tui-textarea", "tui-input"],
         },
       ],
     },
